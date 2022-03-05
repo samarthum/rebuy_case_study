@@ -12,7 +12,6 @@ from src import config
 
 def read_data(fname):
     """
-
     Reads in the dataset from the /data folder
 
     Parameters
@@ -68,23 +67,23 @@ def plot_ts_data(ts_data):
     daily, weekly, monthly, quarterly = time_aggregate_data(ts_data)
 
     daily.plot(linewidth=config.lw, figsize=config.FIGSIZE)
-    plt.title('Daily purchases')
+    plt.title('Daily')
     plt.show();
 
     daily.rolling(7).mean().plot(linewidth=config.lw, figsize=config.FIGSIZE)
-    plt.title('Daily purchases (7-day MA)')
+    plt.title('Daily (7-day MA)')
     plt.show();
 
     weekly.plot(linewidth=config.lw, figsize=config.FIGSIZE)
-    plt.title('Weekly purchases')
+    plt.title('Weekly')
     plt.show();
 
     monthly.plot(linewidth=config.lw, figsize=config.FIGSIZE)
-    plt.title('Monthly purchases')
+    plt.title('Monthly')
     plt.show();
 
     quarterly.plot(linewidth=config.lw, figsize=config.FIGSIZE)
-    plt.title('Quarterly purchases')
+    plt.title('Quarterly')
     plt.show();
     
     
