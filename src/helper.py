@@ -64,25 +64,26 @@ def plot_ts_data(ts_data):
     ts_data : DataFrame
         Timeseries data with datetime index.
     """
+    plot_params = {'linewith': config.lw, 'figsize': config.FIGSIZE}
     daily, weekly, monthly, quarterly = time_aggregate_data(ts_data)
 
-    daily.plot(linewidth=config.lw, figsize=config.FIGSIZE)
+    daily.plot(**plot_params)
     plt.title('Daily')
     plt.show();
 
-    daily.rolling(7).mean().plot(linewidth=config.lw, figsize=config.FIGSIZE)
+    daily.rolling(7).mean().plot(**plot_params)
     plt.title('Daily (7-day MA)')
     plt.show();
 
-    weekly.plot(linewidth=config.lw, figsize=config.FIGSIZE)
+    weekly.plot(**plot_params)
     plt.title('Weekly')
     plt.show();
 
-    monthly.plot(linewidth=config.lw, figsize=config.FIGSIZE)
+    monthly.plot(**plot_params)
     plt.title('Monthly')
     plt.show();
 
-    quarterly.plot(linewidth=config.lw, figsize=config.FIGSIZE)
+    quarterly.plot(**plot_params)
     plt.title('Quarterly')
     plt.show();
     
