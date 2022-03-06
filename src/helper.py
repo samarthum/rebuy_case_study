@@ -64,7 +64,7 @@ def plot_ts_data(ts_data):
     ts_data : DataFrame
         Timeseries data with datetime index.
     """
-    plot_params = {'linewith': config.lw, 'figsize': config.FIGSIZE}
+    plot_params = {'linewidth': config.lw, 'figsize': config.FIGSIZE}
     daily, weekly, monthly, quarterly = time_aggregate_data(ts_data)
 
     daily.plot(**plot_params)
