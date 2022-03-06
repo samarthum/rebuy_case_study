@@ -138,3 +138,26 @@ def plot_by_day_of_week(ts_data, title=None, xlabel=None, ylabel=None):
     plt.xticks(ticks=[0, 1, 2, 3, 4, 5, 6],
                labels=['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], 
                rotation=0);
+    
+def get_cvr(data, period, title):
+    """
+    Calculate and plot conversion rate aggregated by given time period.
+
+    Parameters
+    ----------
+    data : DataFrame
+    period : str
+    title : str
+    """
+    conv_rate = data.resample(period)['sales', 'visits'].sum()
+    conv_rate['cvr'] = (conv_rate['sales']/conv_rate['visits']).fillna(0)
+    
+    if period == 'M':
+        conv_rate['cvr'].plot(kind='bar', lw=config.lw, figsize=config.FIGSIZE)
+        plt.xticks(ticks=range(len(conv_rate)), labels=conv_rate.index.strftime('%B'), rotation=30)
+    else:
+        conv_rate['cvr'].plot(lw=config.lw, figsize=config.FIGSIZE) 
+        
+    plt.title(title)
+    plt.xlabel('Date')
+    plt.ylabel('Conversion Rate (Sales/Visits)');
