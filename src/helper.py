@@ -5,6 +5,7 @@ import seaborn as sns
 import statsmodels.api as sm
 import os
 from pathlib import Path
+from sklearn.preprocessing import StandardScaler
 
 plt.style.use('fivethirtyeight')
 
@@ -54,7 +55,8 @@ def time_aggregate_data(ts_data):
     return daily, weekly, monthly, quarterly
 
 
-def plot_ts_data(ts_data):
+def plot_ts_data(ts_data, plot_daily=True, plot_daily_ma=False, plot_weekly=False,
+                 plot_monthly=False, plot_quarterly=False, title=''):
     """
     Time series plot of data at multiple levels:
         daily, daily with MA, weekly, monthly and quarterly
@@ -66,26 +68,31 @@ def plot_ts_data(ts_data):
     """
     plot_params = {'linewidth': config.lw, 'figsize': config.FIGSIZE}
     daily, weekly, monthly, quarterly = time_aggregate_data(ts_data)
+    
+    if plot_daily:
+        daily.plot(**plot_params)
+        plt.title('Daily ' + title)
+        plt.show();
 
-    daily.plot(**plot_params)
-    plt.title('Daily')
-    plt.show();
+    if plot_daily_ma:
+        daily.rolling(7).mean().plot(**plot_params)
+        plt.title('Daily (7-day MA) ' + title)
+        plt.show();
 
-    daily.rolling(7).mean().plot(**plot_params)
-    plt.title('Daily (7-day MA)')
-    plt.show();
+    if plot_weekly:
+        weekly.plot(**plot_params)
+        plt.title('Weekly ' + title)
+        plt.show();
 
-    weekly.plot(**plot_params)
-    plt.title('Weekly')
-    plt.show();
+    if plot_monthly:
+        monthly.plot(**plot_params)
+        plt.title('Monthly ' + title)
+        plt.show();
 
-    monthly.plot(**plot_params)
-    plt.title('Monthly')
-    plt.show();
-
-    quarterly.plot(**plot_params)
-    plt.title('Quarterly')
-    plt.show();
+    if plot_quarterly:
+        quarterly.plot(**plot_params)
+        plt.title('Quarterly')
+        plt.show();
     
     
 def plot_decomposed(ts_data):
