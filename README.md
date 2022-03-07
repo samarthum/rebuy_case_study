@@ -35,5 +35,15 @@ The notebooks contain many visualisations, as well as comments denoting insights
 - Conversion Rate by Category
 
 ![Conversion Rate by Category](https://github.com/samarthum/rebuy_case_study/blob/main/images/conv_rate_by_cat.PNG "Conversion Rate by Category")
+
  Here we can see that Apple has the highest conversion rate amongst all the main product categories.
+ 
+- Sales and Purchases across days of the week
+
+![Sales vs.Day of Week](https://github.com/samarthum/rebuy_case_study/blob/main/images/sales_dayofweek.PNG)
+
+![Purchases vs.Day of Week](https://github.com/samarthum/rebuy_case_study/blob/main/images/purchases_dayofweek.PNG)
+
+We can observe that in both of these cases, the volume is much smaller during the weekends. 
+Also, for sales, the volume is quite high on Mondays. We don't see this pattern in purchases.
 
