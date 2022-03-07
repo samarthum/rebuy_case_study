@@ -63,3 +63,8 @@ Here we can notice two things:
 
 Here we can see how the conversion rate is significantly higher during December. This is also throwing off the model. We also notice that the conversion rate otherwise remains quite stable on average. 
 
+- Monthly conversion rate by category
+
+![SMonthly conv rate by cat](https://github.com/samarthum/rebuy_case_study/blob/main/images/monthly_conv_rate_by_cat.PNG)
+
+Here we see that the conversion rate for Apple peaks in August for some reason. 
