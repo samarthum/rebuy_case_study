@@ -32,8 +32,8 @@ The approach I took here was to build a *boosted hybrid*. A simple linear regres
 ## Some Insights
 The notebooks contain many visualisations, as well as comments denoting insights. But here are a few of them. 
 
-- Conversion Rate by Category 
+- Conversion Rate by Category
 
- ![Conversion Rate by Category](https://github.com/samarthum/rebuy_case_study/blob/main/images/conv_rate_by_cat.PNG "Conversion Rate by Category")
+![Conversion Rate by Category](https://github.com/samarthum/rebuy_case_study/blob/main/images/conv_rate_by_cat.PNG "Conversion Rate by Category")
  Here we can see that Apple has the highest conversion rate amongst all the main product categories.
 
