@@ -9,7 +9,16 @@ Admittedly, I took quite a haphazard approach to the problem and I don't believe
 (Having said that, there are still quite a few visualisations in the notebooks that are contained within this repository.)
 
 The modelling problem was to forecast the 'conversion rate' of each product for the dates 1st January to 7th January, 2021. I had to make an assumption here about the definition of conversion rate because I only started working on this problem on Saturday, and had to submit it by Monday, so there wasn't a window of opportunity to email Carrie to get clarification on this point. 
-This was also the first time that I worked on a time series problem. (Haven't gotten the chance to do much of it in the past, at work). Since this was the first time, I tried to extensively use resources available online. The time series modelling tutorial on Kaggle was a good friend. :) ([Here](https://www.kaggle.com/learn/time-series))
+This was also the first time that I worked on a time series problem. (Haven't gotten the chance to do much of it in the past, at work). Since this was the first time, I tried to extensively use resources available online. The time series modelling tutorial on Kaggle was a good friend. :) ([Found here](https://www.kaggle.com/learn/time-series))
 
+I want to thank the DS team at Rebuy for putting together this interesting case study. There was a lot of data (some of which I didn't get to dive into), and I ended up learning quite a bit!
 
-## Approach
+## File Structure
+- All of the analysis and visualisations can be found in the notebooks/ folder
+- 'Conversion Rate Forecast.ipynb' contains the solution to the modelling challenge.
+- The rest of the notebooks contain analyses and visualisations. They also contain some insights derived from the visualisations. 
+- The src/ folder contains a config.py file and a helper.py file which contain helper functions that I used to modularise the code a bit, and to also clean up the notebooks.
+
+## Analysis Approach
+- I approached the analysis in a very ad-hoc way. I jumped into each of the datasets at a very high level first to get an understanding of the kind of information that is present in each of them.
+- This included looking at some simple statistics and plots. 
