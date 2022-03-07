@@ -1,3 +1,5 @@
+import warnings
+warnings.filterwarnings('ignore')
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,11 +8,21 @@ import statsmodels.api as sm
 import os
 from pathlib import Path
 from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LinearRegression
+from statsmodels.tsa.deterministic import CalendarFourier, DeterministicProcess
+from xgboost import XGBRegressor
 
 plt.style.use('fivethirtyeight')
 
 from src import config
+plot_params = {'color': '0.75',
+ 'style': '.-',
+ 'markeredgecolor': '0.25',
+ 'markerfacecolor': '0.25',
+ 'legend': False}
 
+
+plt.rcParams["figure.figsize"] = config.FIGSIZE
 def read_data(fname):
     """
     Reads in the dataset from the /data folder
