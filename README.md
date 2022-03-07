@@ -15,7 +15,7 @@ I want to thank the DS team at Rebuy for putting together this interesting case 
 
 ## File Structure
 - All of the analysis and visualisations can be found in the notebooks/ folder
-- 'Conversion Rate Forecast.ipynb' contains the solution to the modelling challenge.
+- **'Conversion Rate Forecast.ipynb' contains the solution to the modelling challenge.**
 - The rest of the notebooks contain analyses and visualisations. They also contain some insights derived from the visualisations. 
 - The src/ folder contains a config.py file and a helper.py file which contain helper functions that I used to modularise the code a bit, and to also clean up the notebooks.
 
