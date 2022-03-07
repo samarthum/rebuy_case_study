@@ -20,5 +20,12 @@ I want to thank the DS team at Rebuy for putting together this interesting case 
 - The src/ folder contains a config.py file and a helper.py file which contain helper functions that I used to modularise the code a bit, and to also clean up the notebooks.
 
 ## Analysis Approach
-- I approached the analysis in a very ad-hoc way. I jumped into each of the datasets at a very high level first to get an understanding of the kind of information that is present in each of them.
-- This included looking at some simple statistics and plots. 
+- I approached the analysis in a very ad-hoc way. I jumped into each of the datasets at a very high level first to get an understanding of the kind of information that is present in each of them. (This included looking at some simple statistics and plots.)
+- I tried combining a few data sources together to understand how they interact, and whether any actionable insight could be pulled from there. 
+- I tried to also think about the data from the business perspective (and from the perspective of a CM, but I didn't do a great job at that). 
+- I pulled out numbers for some of the questions that I found interesting (best selling products, high traffic times of the year etc.)
+
+## Modelling Approach
+
+The approach I took here was to build a *boosted hybrid*. A simple linear regression model was be used to model the trend of the data. Then I trained an XGBoost on the residuals of the first model. 
+
