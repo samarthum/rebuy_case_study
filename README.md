@@ -29,3 +29,8 @@ I want to thank the DS team at Rebuy for putting together this interesting case 
 
 The approach I took here was to build a *boosted hybrid*. A simple linear regression model was be used to model the trend of the data. Then I trained an XGBoost on the residuals of the first model. 
 
+## Some Insights
+The notebooks contain many visualisations, as well as comments denoting insights. But here are a few of them. 
+
+
+
