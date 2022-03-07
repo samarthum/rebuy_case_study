@@ -47,3 +47,13 @@ The notebooks contain many visualisations, as well as comments denoting insights
 We can observe that in both of these cases, the volume is much smaller during the weekends. 
 Also, for sales, the volume is quite high on Mondays. We don't see this pattern in purchases.
 
+- Weekly Sales, Visits across the Year
+
+![Sales across the year](https://github.com/samarthum/rebuy_case_study/blob/main/images/weekly_sales.PNG)
+
+![Visits across the year](https://github.com/samarthum/rebuy_case_study/blob/main/images/weekly_visits.PNG)
+
+Here we can notice two things: 
+1. Sales went up significantly during the months of November and Decemeber. This could be due to the fact that it's the holiday season. 
+2. Page Visits DOWN significantly during the same months. This is quite odd and maybe needs some deeper analysis to understand why this might have happened. 
+
