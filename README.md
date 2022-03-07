@@ -55,5 +55,11 @@ Also, for sales, the volume is quite high on Mondays. We don't see this pattern 
 
 Here we can notice two things: 
 1. Sales went up significantly during the months of November and Decemeber. This could be due to the fact that it's the holiday season. 
-2. Page Visits went up significantly during November, but it dropped suddenly in December. This is quite odd and needs some deeper analysis to understand why this might have happened. 
+2. Page Visits went up significantly during November, but it dropped suddenly in December. This is quite odd and needs some deeper analysis to understand why this might have happened.
+
+- The above is also causing the conversion rate to jump up quite a bit. 
+
+![Conversion Rate across the year](https://github.com/samarthum/rebuy_case_study/blob/main/images/weekly_conv_rate.PNG)
+
+Here we can see how the conversion rate is significantly higher during December. This is also throwing off the model. We also notice that the conversion rate otherwise remains quite stable on average. 
 
